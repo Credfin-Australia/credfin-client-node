@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "declarationDir": "types",
+    "baseUrl": "src",
+    "resolveJsonModule": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "downlevelIteration": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictPropertyInitialization": false,
+    "types": ["node"],
+    "lib": [
+      "es2019",
+      "dom",
+      "dom.iterable"
+    ]  
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "dist/**/*.d.ts",
+    "node_modules",
+    "dist",
+    "declarations",
+    "**/__tests__/*"
+  ]
+}
