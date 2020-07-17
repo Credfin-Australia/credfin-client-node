@@ -2,19 +2,25 @@
   "name": "@credfin/client",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "types": "types/index.d.ts",
   "scripts": {
     "compile": "tsc -p .",
+    "test": "mocha lib/tests/**/*.js",
     "start": "ts-node-dev --inspect -- src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/expect": "^24.3.0",
+    "@types/mocha": "^8.0.0",
     "@types/node": "^14.0.20",
+    "chai": "^4.2.0",
     "eslint": "^7.4.0",
     "eslint-plugin-import": "^2.22.0",
+    "mocha": "^8.0.1",
     "nodemon": "^2.0.4",
     "ts-node": "^8.10.2",
     "ts-node-dev": "^1.0.0-pre.50",
@@ -28,6 +34,7 @@
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^6.11.0",
     "node-fetch": "^2.6.0",
-    "prettier-eslint": "^11.0.0"
+    "prettier-eslint": "^11.0.0",
+    "ts-mocha": "^7.0.0"
   }
 }

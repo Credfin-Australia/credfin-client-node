@@ -2,7 +2,7 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "rootDir": "src",
-    "outDir": "dist",
+    "outDir": "lib",
     "strict": true,
     "noUnusedLocals": true,
     "declaration": true,
@@ -22,7 +22,7 @@
     ]  
   },
   "include": [
-    "src"
+    "src/**/*"
   ],
   "exclude": [
     "dist/**/*.d.ts",
