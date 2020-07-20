@@ -1,6 +1,6 @@
 import {expect} from 'chai';
 import 'mocha';
-import * as credfin from '../index';
+import * as credfin from '../lib/index';
 import * as dotenv from 'dotenv'
 
 dotenv.config()
@@ -15,8 +15,8 @@ describe('smoke tests', () => {
 
   describe('application bundle', () => {
     it('bundle', async () => {
-      const accountList = await credfinClient.get('/api/applications/963022/bundle');
+      const accountList = await credfinClient.get('/api/applications/2313/bundle');
       expect(accountList.status).to.equal(200);
-    })
+    }).timeout(30000);
   }) 
 })
