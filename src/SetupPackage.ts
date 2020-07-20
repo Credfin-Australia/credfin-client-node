@@ -20,6 +20,8 @@ function main() {
     __dirname + "/package.json",
     Buffer.from(JSON.stringify(sourceObj, null, 2), "utf-8")
   );
+
+  fs.copyFileSync(__dirname + "/../README.md", __dirname + "/README.md");
 }
 
 main();
