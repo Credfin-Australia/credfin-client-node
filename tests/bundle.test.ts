@@ -5,8 +5,8 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
-// Returned from web hooks refer to webhook docs
-const bundleId = '2313';
+// Use your specific bundle id for testing this endpoint
+const bundleId = '963079';
 
 describe('unit tests', () => {
   const credfinClient = new credfin.Client({
@@ -26,17 +26,6 @@ describe('unit tests', () => {
         throw new Error(err.message);
       })
       expect(accountList.status).to.equal(200);
-    }).timeout(30000);
-
-    it('error handling', async () => {
-      const accountList = await credfinClient.get(`/api/applications//bundle`,
-      (err) => {
-        if (err.response) {
-          console.log(err.response.data);
-        }
-        return err.message;
-      })
-      expect(accountList).to.be.a('string');
     }).timeout(30000);
   }) 
 })

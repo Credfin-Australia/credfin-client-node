@@ -1,11 +1,13 @@
 {
   "name": "@credfin/client",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "compile": "tsc -p .",
+    "prebuildpackage": "npm run compile && node lib/SetupPackage.js",
+    "buildpackage": "cd dist && npm pack",
     "test": "ts-mocha tests/**/*.ts"
   },
   "keywords": [],
