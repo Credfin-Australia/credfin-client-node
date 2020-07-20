@@ -44,6 +44,7 @@ class Client {
         "Required environment variable CREDFIN_ENV=<STAGING | PRODUCTION>" 
       );
     }
+    // Returned from web hooks refer to webhook docs
 
     this.secret = secret;
     this.identifier = identifier;
@@ -72,7 +73,7 @@ class Client {
     }
   }
 
-  async get(path: string) {
+  async get(path: string, errorHandler: (err: axios.AxiosError) => any) {
     const method = "GET";
     const headers = await this.generateHmacHeaders(path, method);
     const response = await this.instance
@@ -81,12 +82,7 @@ class Client {
         headers,
         method,
       })
-      .catch((err) => {
-        if (err.response) {
-          console.log(err.response.data);
-        }
-        throw new Error(err);
-      });
+      .catch(errorHandler);
 
     return response;
   }
