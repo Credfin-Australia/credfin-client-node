@@ -7,7 +7,7 @@
   "scripts": {
     "compile": "tsc -p .",
     "prebuildpackage": "npm run compile && node lib/SetupPackage.js",
-    "buildpackage": "npm run prebuildpackage && cd lib && npm pack",
+    "buildpackage": "npm run prebuildpackage && cd lib && npm publish --access=public",
     "test": "ts-mocha tests/**/*.ts"
   },
   "keywords": [],
