@@ -12,8 +12,6 @@ describe('unit tests', () => {
   const credfinClient = new credfin.Client({
     secret: process.env.CREDFIN_SECRET,
     identifier: process.env.CREDFIN_IDENTIFIER,
-    name: process.env.CREDFIN_NAME,
-    environment: process.env.CREDFIN_ENV
   });
 
   describe('application bundle', () => {

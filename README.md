@@ -6,10 +6,6 @@
 ### Configuration
 
 ```javascript
-
-    // This value must be either 'STAGING' or 'PRODUCTION'
-    const environment = process.env.CREDFIN_ENV;
-   
     /*
     Check the webhook settings for these values on your credfin account
     https://credfin.io/dashboard/user-settings or 
@@ -17,14 +13,11 @@
     */
 
     const secret = process.env.CREDFIN_SECRET;
-    const identifier = process.env.CREDFIN_IDENTIFER;
-    const name = process.env.CREDFIN.NAME;
+    const identifier = process.env.CREDFIN_IDENTIFIER;
 
     const credinClient = new Client({
         secret,
         identififer,
-        name,
-        environment
     })
 
 ```
