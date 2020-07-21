@@ -17,21 +17,22 @@ class Client {
 
   constructor(credfinClient: CredfinClient) {
     const {secret, identifier, name, environment} = credfinClient;
+    const requiredMessage = 'find at https://<staging.credfin || credfin.io>/dashboard/user-settings';
     if (!secret) {
       throw new Error(
-        "Required environment variable CREDFIN_SECRET=<webhook secret>"
+        `Missing Secret ${requiredMessage}`
       );
     }
 
     if (!identifier) {
       throw new Error(
-        "Required environment variable CREDFIN_IDENTIFER=<webhook indentifer>"
+        `Missing identifier ${requiredMessage}`
       );
     }
 
     if (!name) {
       throw new Error(
-        "Required environment variable CREDFIN_NAME=<webhook name>"
+        `Missing name ${requiredMessage}`
       );
     }
 
@@ -41,7 +42,7 @@ class Client {
       console.log('Using credfin production enviroment');
     } else  {
       throw new Error(
-        "Required environment variable CREDFIN_ENV=<STAGING | PRODUCTION>" 
+        "Missing credfin enviroment must be either STAGING or PRODUCTION" 
       );
     }
     // Returned from web hooks refer to webhook docs
