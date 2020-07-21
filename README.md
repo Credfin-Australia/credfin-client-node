@@ -20,7 +20,7 @@
     const identifier = process.env.CREDFIN_IDENTIFER;
     const name = process.env.CREDFIN.NAME;
 
-    const credinfClient = new Client({
+    const credinClient = new Client({
         secret,
         identififer,
         name,
@@ -34,7 +34,7 @@
 ### Client Methods
 ```javascript
 
-// Handles HMAC Authentication for credfin endpoints between client and credfin servers
+// Handles Authentication for credfin endpoints between client and credfin servers
 Client.get(urlPath: string, handleErrorCB: (error: axios.AxiosError) => any)
 
 ```
