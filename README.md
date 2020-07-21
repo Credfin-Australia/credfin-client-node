@@ -28,7 +28,7 @@
     })
 
 ```
-### Note to find relevant find bundle webhooks must have previously been configured
+### Note Bundle webhooks must have previously been configured
 
 
 ### Client Methods
