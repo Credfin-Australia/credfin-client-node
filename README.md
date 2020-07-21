@@ -3,6 +3,10 @@
  npm install @credfin/client 
  ```
 
+### Importing
+```javascript
+import {Client} from '@credin/client';
+```
 ### Configuration
 
 ```javascript
@@ -35,12 +39,18 @@ Client.get(urlPath: string, handleErrorCB: (error: axios.AxiosError) => any)
 ### Usage Example
 
 ```javascript
+    import {Client} from '@credfin/client';
+
     const example = async () => {
       const bundleId = 0; // Check webhooks for specific bundle id
+      const credinClient = new Client({
+          secret,
+          identififer,
+        })
       const urlPath = `/api/applications/${bundleId})/bundle`;
   
       // Callback handles axios.AxiosError refer to axios docs for more info
-      const response = await credfin.get(urlPath, (err) => {
+      const response = await credinClient.get(urlPath, (err) => {
           throw new Error(err.message);
       }) 
     }
