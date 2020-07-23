@@ -10,8 +10,8 @@ const bundleId = '963079';
 
 describe('unit tests', () => {
   const credfinClient = new credfin.Client({
-    secret: process.env.CREDFIN_SECRET,
-    identifier: process.env.CREDFIN_IDENTIFIER,
+    secret: process.env.CREDFIN_TOKEN_SECRET,
+    identifier: process.env.CREDFIN_TOKEN_IDENTIFIER,
   });
 
   describe('application bundle', () => {

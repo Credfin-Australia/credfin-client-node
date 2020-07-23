@@ -16,11 +16,11 @@ class Client {
     const requiredMessage = 'https://credfin.io/dashboard/user-settings';
 
     if (!secret) {
-      throw new Error(`Missing Secret ${requiredMessage}`);
+      throw new Error(`Missing Token Secret ${requiredMessage}`);
     }
 
     if (!identifier) {
-      throw new Error(`Missing identifier ${requiredMessage}`);
+      throw new Error(`Missing Token identifier ${requiredMessage}`);
     }
 
     this.secret = secret;
