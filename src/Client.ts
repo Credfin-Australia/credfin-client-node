@@ -47,7 +47,7 @@ class Client {
     }
   }
 
-  async get(path: string, errorHandler: (err: axios.AxiosError) => any): Promise<any> {
+  async get(path: string, errorHandler: (err: axios.AxiosError) => any): Promise<axios.AxiosResponse> {
     const method = 'GET';
     const headers = await this.generateHmacHeaders(path, method);
     const response = await this.instance
@@ -81,7 +81,6 @@ class Client {
     const hmac = crypto.createHmac('sha256', this.secret);
     hmac.update(message);
     const hmacBase64 = hmac.digest('base64');
-    console.log(`HMAC ${this.identifier}:${hmacBase64}`);
 
     const headers = {
       Date: timestamp,

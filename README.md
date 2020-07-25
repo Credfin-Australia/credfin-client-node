@@ -3,6 +3,9 @@
  npm install @credfin/client 
  ```
 
+### Built and Tested on
+<p> Node version 12.16.3 </p>
+
 ### Importing
 ```javascript
 import {Client} from '@credin/client';
@@ -32,10 +35,9 @@ import {Client} from '@credin/client';
 ```javascript
 
 // Handles Authentication for credfin endpoints between client and credfin servers
-Client.get(urlPath: string, handleErrorCB: (error: axios.AxiosError) => any)
+get(urlPath: string, handleErrorCB: (error: axios.AxiosError) => any): axios.AxiosResponse
 
 ```
-
 ### Usage Example
 
 ```javascript
@@ -58,6 +60,6 @@ Client.get(urlPath: string, handleErrorCB: (error: axios.AxiosError) => any)
     example();
 
 ```
-[Response body will be json check API Docs for more specific information](https://credfin.io/api/docs/)
+[response.data is dependant on the api requests get used. Check API docs for more information](https://credfin.io/api/docs/)
 
 
