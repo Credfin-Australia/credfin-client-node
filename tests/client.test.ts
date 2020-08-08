@@ -6,8 +6,8 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 // Use your specific bundle id for testing this endpoint
-const bundleId = '13666';
-const interimAccountId = '';
+const bundleId = '';
+const summaryId = '963653';
 
 // Note that es5 function syntax required otherwise breaks Chai
 describe('Client Unit Tests', function () {
@@ -20,7 +20,7 @@ describe('Client Unit Tests', function () {
     this.timeout(30000);
     before(async function () {
       const accountList = await credfinClient.get(
-        `/api/applications/${bundleId}/bundle`,
+        `/api/applications/${summaryId}/summary`,
         (err) => {
           if (err.response) {
             console.log(err.response.data);
@@ -38,7 +38,7 @@ describe('Client Unit Tests', function () {
     });
 
     it('Confirm that response contains id', async function () {
-      expect(this.accountList.data.id).to.equal(+bundleId);
+      expect(this.accountList.data.id).to.equal(+summaryId);
     });
   });
 
