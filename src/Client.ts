@@ -26,7 +26,7 @@ class Client {
     this.secret = secret;
     this.identifier = identifier;
 
-    const baseURL = 'https://staging.credfin.io';
+    const baseURL = 'https://credfin.io';
 
     this.instance = axios.default.create({
       baseURL,
