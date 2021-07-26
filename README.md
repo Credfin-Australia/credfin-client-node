@@ -2,9 +2,11 @@
 
 A wrapper that handles authentication with the Credfin API ([docs](https://credfin.io/api/v1/docs)).
 
-Built and Tested on Node version `12.16.3`
+Built and Tested on Node version `14.15.4`
 
 The exported function `createCredfinClient` creates an Axios instance that automatically creates the requisite authentication headers. The resultant Axios instance can then be used as usual.
+
+For Python and PHP language usage, check the HMAC integration [docs](https://credfin.io/docs/v1/hmac-authentication).
 
 ## Prerequisites
 
